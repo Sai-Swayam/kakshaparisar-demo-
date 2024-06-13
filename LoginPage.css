@@ -1,0 +1,86 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+  background-image: linear-gradient(135deg, blue, green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  height: 40rem;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+.left-container {
+  width: 50%;
+  background-color: rgb(255, 255, 255, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* font-weight: bold; */
+}
+.right-container {
+  width: 50%;
+  background-color: rgb(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.left-body {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center
+}
+.right-body {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.right {
+  background-color: rgb(48, 48, 48);
+  color: white;
+}
+.left{
+    background-color: rgb(224, 224, 224);
+}
+input {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.left:hover {
+  transition: 200ms ease;
+  background-color: rgb(218, 245, 255);
+}
+.right:hover {
+  transition: 200ms ease;
+  background-color: rgb(51, 72, 79);
+}
+.line {
+  font-weight: bolder;
+  font-size: xx-large;
+}
+span {
+  font-weight: lighter;
+  font-style: italic;
+}
+button {
+    font-size: larger;
+    width: 50%;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 1rem;
+}
