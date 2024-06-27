@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/task.css";
 
 const Task = () => {
   const [tasks, setTasks] = useState([]);
   const [taskInfo, setTaskInfo] = useState("");
+
   //  add task
   function handleAddTask() {
     const newTask = {
@@ -21,9 +22,10 @@ const Task = () => {
 
   function handleTaskInfoChange(event) {
     setTaskInfo(event.target.value);
+    user.notes = tasks;
   }
-  
-  // var addInput = document.getElementById('addbar');
+
+  // const addInput = document.getElementById('addbar');
   // addInput.addEventListener("keypress", function(event){
   //   if(event.key === "Enter"){
   //     event.preventDefault();
