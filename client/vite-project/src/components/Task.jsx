@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "../styles/task.css";
+import { UserContext } from "../../context/userContext";
+import axios from "axios";
 
 const Task = () => {
   const [tasks, setTasks] = useState([]);
   const [taskInfo, setTaskInfo] = useState("");
-
   //  add task
   function handleAddTask() {
     const newTask = {
@@ -22,16 +23,7 @@ const Task = () => {
 
   function handleTaskInfoChange(event) {
     setTaskInfo(event.target.value);
-    user.notes = tasks;
   }
-
-  // const addInput = document.getElementById('addbar');
-  // addInput.addEventListener("keypress", function(event){
-  //   if(event.key === "Enter"){
-  //     event.preventDefault();
-  //     document.getElementById("adderbutton").click();
-  //   }
-  // })
 
   return (
     <>
@@ -45,7 +37,12 @@ const Task = () => {
               >
                 -
               </button>
-              <input type="text" value={task.info} className="task" />
+              <input
+                type="text"
+                value={task.info}
+                className="task"
+                onChange={() => {}}
+              />
             </div>
           ))}
         </div>

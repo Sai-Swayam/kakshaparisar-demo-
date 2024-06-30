@@ -7,8 +7,12 @@ const Dashboard = () => {
 
   return (
     <div>
-      <h1>Dashboard</h1>
-      {!!user && <h2>Hi {user.name}</h2>}
+      {!!user && (
+        <h1>
+          <span id="greet">Hi</span> {user.name}
+        </h1>
+      )}
+      <h2 id="pagehead">Dashboard</h2>
 
       <div className="container">
         <div className="sun-container">

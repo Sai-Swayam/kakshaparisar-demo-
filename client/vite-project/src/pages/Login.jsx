@@ -30,9 +30,9 @@ function Login() {
     }
   };
   return (
-    <div>
+    <div className="form-cont">
       <form onSubmit={loginUser}>
-        <label>Email</label>
+        {/* <label>Email</label> */}
         <input
           type="email"
           placeholder="Email"
@@ -41,7 +41,7 @@ function Login() {
             setData({ ...data, email: e.target.value });
           }}
         />
-        <label>Password</label>
+        {/* <label>Password</label> */}
         <input
           type="password"
           placeholder="Password"

@@ -33,23 +33,23 @@ function Register() {
     }
   };
   return (
-    <div>
+    <div className="form-cont">
       <form onSubmit={registerUser}>
-        <label>Name</label>
+        {/* <label>Name</label> */}
         <input
           type="text"
           placeholder="Name"
           value={data.name}
           onChange={(e) => setData({ ...data, name: e.target.value })}
         />
-        <label>Email</label>
+        {/* <label>Email</label> */}
         <input
           type="email"
           placeholder="Email"
           value={data.email}
           onChange={(e) => setData({ ...data, email: e.target.value })}
         />
-        <label>Password</label>
+        {/* <label>Password</label> */}
         <input
           type="password"
           placeholder="Create Password"

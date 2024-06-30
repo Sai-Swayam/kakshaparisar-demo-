@@ -50,7 +50,7 @@ const loginUser = async (req, res) => {
 
         const match = await comparePassword(password, user.password)
         if (match) {
-            jwt.sign({ email: user.email, id: user._id, name: user.name }, process.env.JWT_SECRET, {}, (err, token) => {
+            jwt.sign({ email: user.email, id: user._id, name: user.name, notes: user.notes }, process.env.JWT_SECRET, {}, (err, token) => {
                 if (err) {
                     throw err;
                 }
@@ -76,12 +76,17 @@ const getProfile = (req, res) => {
             if (err) {
                 throw err;
             }
-            res.json(user)
+            // console.log(user);
+            res.json(user);
         })
     }
     else {
         res.json(null);
     }
 }
+
+// const postUser = (req, res) => {
+
+// }
 
 module.exports = { test, registerUser, loginUser, getProfile }
