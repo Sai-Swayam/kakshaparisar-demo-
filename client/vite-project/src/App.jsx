@@ -5,7 +5,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import axios from "axios";
 import { Toaster } from "react-hot-toast";
-import { UserContextProvider } from "../context/userContext";
+import { UserContextProvider } from "./context/userContext";
 import Dashboard from "./pages/Dashboard";
 
 axios.defaults.baseURL = "http://localhost:8000";

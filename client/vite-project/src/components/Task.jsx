@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import "../styles/task.css";
-import { UserContext } from "../../context/userContext";
+import { UserContext } from "../context/userContext";
 import axios from "axios";
 
 const Task = () => {
