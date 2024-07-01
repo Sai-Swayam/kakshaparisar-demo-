@@ -1,22 +1,42 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "../styles/task.css";
+import { UserContext } from "../context/userContext";
+import axios from "axios";
 
 const Task = () => {
+  const { user } = useContext(UserContext);
   const [tasks, setTasks] = useState([]);
   const [taskInfo, setTaskInfo] = useState("");
   //  add task
-  function handleAddTask() {
-    const newTask = {
-      info: taskInfo,
-    };
-    if (newTask.info !== "") {
-      setTasks((t) => [...t, newTask]);
+  async function handleAddTask() {
+    try {
+      const newTask = {
+        info: taskInfo,
+      };
+      if (newTask.info !== "") {
+        await axios.post("/addtaskprofile", {
+          email: user.email,
+          task: newTask,
+        });
+
+        setTasks((t) => [...t, newTask]);
+        setTaskInfo("");
+      }
+    } catch (error) {
+      console.log(error);
     }
-    setTaskInfo("");
   }
   //  remove task
-  function handleRemoveTask(index) {
-    setTasks((t) => t.filter((_, i) => i != index));
+  async function handleRemoveTask(info, index) {
+    try {
+      await axios.post("/deltaskprofile", {
+        email: user.email,
+        inf: info,
+      });
+      setTasks((t) => t.filter((_, i) => i != index));
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   function handleTaskInfoChange(event) {
@@ -30,7 +50,7 @@ const Task = () => {
           {tasks.map((task, index) => (
             <div key={index} className="task-container">
               <button
-                onClick={() => handleRemoveTask(index)}
+                onClick={() => handleRemoveTask(task.info, index)}
                 className="delbtn"
               >
                 -

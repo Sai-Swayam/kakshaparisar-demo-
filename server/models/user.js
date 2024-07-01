@@ -7,7 +7,9 @@ const userSchema = new Schema({
         unique: true
     },
     password: String,
-    notes: []
+    notes: [{
+        info: { type: String }
+    }]
 })
 
 const UserModel = mongoose.model('User', userSchema);
