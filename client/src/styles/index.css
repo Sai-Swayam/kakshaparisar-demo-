@@ -9,6 +9,12 @@ Document
 Use a better box model (opinionated).
 */
 
+
+@font-face {
+	font-family: 'Mona-Sans';
+	src: url('../assets/fonts/Mona-Sans.woff2') format('.woff2');
+}
+
 *,
 ::before,
 ::after {
@@ -18,6 +24,7 @@ Use a better box model (opinionated).
 html {
 	/* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
 	font-family:
+		'Mona-Sans',
 		system-ui,
 		'Segoe UI',
 		Roboto,
@@ -26,10 +33,14 @@ html {
 		sans-serif,
 		'Apple Color Emoji',
 		'Segoe UI Emoji';
-	line-height: 1.15; /* 1. Correct the line height in all browsers. */
-	-webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
-	-moz-tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
-	tab-size: 4; /* 3 */
+	line-height: 1.15;
+	/* 1. Correct the line height in all browsers. */
+	-webkit-text-size-adjust: 100%;
+	/* 2. Prevent adjustments of font size after orientation changes in iOS. */
+	-moz-tab-size: 4;
+	/* 3. Use a more readable tab size (opinionated). */
+	tab-size: 4;
+	/* 3 */
 	scroll-behavior: smooth;
 }
 
@@ -39,7 +50,8 @@ Sections
 */
 
 body {
-	margin: 0; /* Remove the margin in all browsers. */
+	margin: 0;
+	/* Remove the margin in all browsers. */
 }
 
 /*
@@ -53,8 +65,10 @@ Grouping content
 */
 
 hr {
-	height: 0; /* 1 */
-	color: inherit; /* 2 */
+	height: 0;
+	/* 1 */
+	color: inherit;
+	/* 2 */
 }
 
 /*
@@ -94,8 +108,10 @@ pre {
 		Consolas,
 		'Liberation Mono',
 		Menlo,
-		monospace; /* 1 */
-	font-size: 1em; /* 2 */
+		monospace;
+	/* 1 */
+	font-size: 1em;
+	/* 2 */
 }
 
 /**
@@ -137,8 +153,10 @@ Tabular data
 */
 
 table {
-	text-indent: 0; /* 1 */
-	border-color: inherit; /* 2 */
+	text-indent: 0;
+	/* 1 */
+	border-color: inherit;
+	/* 2 */
 }
 
 /*
@@ -156,10 +174,14 @@ input,
 optgroup,
 select,
 textarea {
-	font-family: inherit; /* 1 */
-	font-size: 100%; /* 1 */
-	line-height: 1.15; /* 1 */
-	margin: 0; /* 2 */
+	font-family: inherit;
+	/* 1 */
+	font-size: 100%;
+	/* 1 */
+	line-height: 1.15;
+	/* 1 */
+	margin: 0;
+	/* 2 */
 }
 
 /**
@@ -239,8 +261,10 @@ Correct the cursor style of increment and decrement buttons in Safari.
 */
 
 [type='search'] {
-	-webkit-appearance: textfield; /* 1 */
-	outline-offset: -2px; /* 2 */
+	-webkit-appearance: textfield;
+	/* 1 */
+	outline-offset: -2px;
+	/* 2 */
 }
 
 /**
@@ -257,8 +281,10 @@ Remove the inner padding in Chrome and Safari on macOS.
 */
 
 ::-webkit-file-upload-button {
-	-webkit-appearance: button; /* 1 */
-	font: inherit; /* 2 */
+	-webkit-appearance: button;
+	/* 1 */
+	font: inherit;
+	/* 2 */
 }
 
 /*
@@ -275,21 +301,22 @@ summary {
 }
 
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
 	width: .9rem;
 
 }
 
 ::-webkit-scrollbar-track {
-	background:rgb(20, 20, 20);
+	background: rgb(20, 20, 20);
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
 	background: rgb(40, 40, 40);
 	border-radius: 10px;
 	border: 3px solid rgb(20, 20, 20);
 
 }
-::-webkit-scrollbar-thumb:hover{
+
+::-webkit-scrollbar-thumb:hover {
 	background: rgb(60, 60, 60);
 }
