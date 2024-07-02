@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: 'Mona-Sans';
-  src: url('../assets/fonts/Mona-Sans.woff2') format('.woff2');
+  src: url('../../public/fonts/Mona-Sans.woff2') format('.woff2');
 }
 
 body {
