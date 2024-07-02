@@ -85,8 +85,29 @@ const getProfile = (req, res) => {
     }
 }
 
-// const postUser = (req, res) => {
+const addTaskUser = async (req, res) => {
+    const { email, task } = await req.body;
+    try {
+        const user = await User.findOneAndUpdate({ email: email }, {
+            $push: { notes: task }
+        });
+        res.status(200).json({ message: "task added" });
+        return task;
+    } catch (error) {
+        res.status(500).json({ error: error })
+    }
+}
 
-// }
+const removeTaskUser = async (req, res) => {
+    const { email, inf } = await req.body;
+    try {
+        const user = await User.findOneAndUpdate({ email: email },
+            { $pull: { notes: { info: inf } } },
+            { new: true });
+        res.status(200).json({ message: "task removed" })
+    } catch (error) {
+        res.status(500).json({ error: error })
+    }
+}
 
-module.exports = { test, registerUser, loginUser, getProfile }
+module.exports = { test, registerUser, loginUser, getProfile, addTaskUser, removeTaskUser }

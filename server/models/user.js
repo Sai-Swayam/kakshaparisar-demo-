@@ -15,14 +15,12 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    notes: [
-      {
-        content: { type: String },
-      },
-    ],
-  },
-  { timestamps: true }
-);
+    password: String,
+    notes: [{
+        info: { type: String }
+    }]
+})
+
 
 const UserModel = mongoose.model("User", userSchema);
 module.exports = UserModel;
