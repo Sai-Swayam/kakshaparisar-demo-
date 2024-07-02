@@ -50,7 +50,9 @@ const Task = () => {
           {tasks.map((task, index) => (
             <div key={index} className="task-container">
               <button
+
                 onClick={() => handleRemoveTask(task.info, index)}
+
                 className="delbtn"
               >
                 -

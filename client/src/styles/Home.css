@@ -1,0 +1,21 @@
+main{
+    display: flex;
+    justify-content: center;
+    height: 200vh;
+    width: 100%;
+    /* background-color: var(--clr-secondary); */
+}
+
+
+.hero{
+    line-height: .5rem;
+    letter-spacing: -0.071ch;
+    font-weight: 300;
+    font-size: 5rem;
+    color: var(--font-primary);
+    padding-top: 9rem;
+}
+
+span{
+    font-weight: 700;
+}

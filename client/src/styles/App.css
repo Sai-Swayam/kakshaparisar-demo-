@@ -1,0 +1,92 @@
+:root {
+  --clr-primary: rgb(20, 20, 20);
+  --clr-secondary: rgb(40, 40, 40);
+  --clr-red: #ff5f45;
+  --clr-green: #3bc76e;
+  --clr-yellow: #ffd344;
+  --clr-blue: #5255e0;
+  --clr-purple: #aa7cf7;
+
+
+  --font-primary: rgb(238, 238, 238);
+  --font-secondary: grey;
+  --font-size: 1rem;
+  /* --ffam: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
+  --bh: 100vh;
+}
+
+@font-face {
+  font-family: 'Mona-Sans';
+  src: url('../../public/fonts/Mona-Sans.woff2') format('.woff2');
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100vw;
+  font-family: 'Mona-Sans';
+  font-weight: 400;
+  font-size: var(--font-size);
+  background-color: var(--clr-primary);
+  color: var(--font-primary);
+  line-height: 1.15;
+  /* 1. Correct the line height in all browsers. */
+  /* font-family: var(--ffam); */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-primary);
+}
+
+a:hover {
+  color: var(--font-secondary);
+}
+
+#pagehead,
+#greet {
+  font-weight: 100;
+}
+
+.form-cont {
+  height: var(--bh);
+  width: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  /* border: 1px solid yellow; */
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: linear-gradient(var(--primary), var(--clr-secondary));
+  border-radius: 10px;
+}
+
+form input {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-family: var(--ffam);
+  margin: 0 5rem;
+  border: none;
+}
+
+button {
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  background-color: rgb(0, 119, 255);
+  border: none;
+  color: white;
+}

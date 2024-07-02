@@ -1,0 +1,51 @@
+nav{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 2rem;
+    /* background-color:var(--clr-red); */
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    color: var(--font-primary);
+    /* padding: 2rem; */
+    align-items: center;
+    height: 6vh;
+    width: 56vh;
+    /* margin-top: 2rem; */
+    border-radius: 6rem;
+    background-color: rgba(40, 40, 40, 0.452);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(6px);
+    
+
+
+    /* background: linear-gradient(); */
+}
+
+
+
+nav .one,
+.two {
+    display: flex;
+    justify-content: s;
+}
+
+nav .one {
+    padding: 0 2rem;
+}
+
+nav .two {
+    display: flex;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+
+.links {
+    /* padding: 0 2rem; */
+
+}
