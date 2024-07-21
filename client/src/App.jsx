@@ -9,6 +9,7 @@ import { Toaster } from "react-hot-toast";
 import { UserContextProvider } from "./context/userContext";
 import Dashboard from "./pages/Dashboard";
 import "./styles/App.css"
+// import "../public/fonts/Mona-Sans.woff2"
 
 axios.defaults.baseURL = "http://localhost:8000";
 axios.defaults.withCredentials = true;
