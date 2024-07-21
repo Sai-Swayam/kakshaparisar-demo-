@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
 import "../styles/task.css";
-// import "../public/fonts/Mona-Sans.woff2"
 import { UserContext } from "../context/userContext";
 import axios from "axios";
 

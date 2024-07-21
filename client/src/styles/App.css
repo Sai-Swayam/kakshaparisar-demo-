@@ -16,20 +16,12 @@
   --bh: 100vh;
 }
 
-/* @font-face {
-  font-family: 'Mona Sans';
-  src:
-    url("../../public/fonts/Mona-Sans.woff2") format('woff2 supports variations'),
-    url("../../public/fonts/Mona-Sans.woff2") format('woff2-variations');
-  font-weight: 200 900;
-  font-stretch: 75% 125%;
-} */
 
 body {
   min-height: 100vh;
   overflow-x: hidden;
   width: 100vw;
-  font-family: 'Mona-Sans';
+  font-family: 'Mona Sans';
   font-weight: 400;
   font-size: var(--font-size);
   background-color: var(--clr-primary);

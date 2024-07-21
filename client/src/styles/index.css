@@ -13,8 +13,8 @@ Use a better box model (opinionated).
 @font-face {
 	font-family: 'Mona Sans';
 	src:
-		url("../../public/fonts/Mona-Sans.woff2") format('woff2 supports variations'),
-		url("../../public/fonts/Mona-Sans.woff2") format('woff2-variations');
+		url("../assets/fonts/Mona-Sans.woff2") format('woff2 supports variations'),
+		url("../assets/fonts/Mona-Sans.woff2") format('woff2-variations');
 	font-weight: 200 900;
 	font-stretch: 75% 125%;
 }
@@ -28,7 +28,7 @@ Use a better box model (opinionated).
 html {
 	/* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
 	font-family:
-		'Mona-Sans',
+		'Mona Sans',
 		system-ui,
 		'Segoe UI',
 		Roboto,

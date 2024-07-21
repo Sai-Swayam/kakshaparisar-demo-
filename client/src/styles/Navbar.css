@@ -9,7 +9,7 @@ nav{
 .navbar{
     display: flex;
     justify-content: space-between;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--font-primary);
     /* padding: 2rem; */
     align-items: center;
